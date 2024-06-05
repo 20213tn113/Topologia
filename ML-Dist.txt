@@ -39,10 +39,19 @@ spanning-tree mode pvst
 !
 !
 interface FastEthernet0/1
+ switchport trunk native vlan 8
+ switchport trunk encapsulation dot1q
+ switchport mode dynamic desirable
 !
 interface FastEthernet0/2
+ switchport trunk native vlan 8
+ switchport trunk encapsulation dot1q
+ switchport mode dynamic desirable
 !
 interface FastEthernet0/3
+ switchport trunk native vlan 8
+ switchport trunk encapsulation dot1q
+ switchport mode dynamic desirable
 !
 interface FastEthernet0/4
 !
