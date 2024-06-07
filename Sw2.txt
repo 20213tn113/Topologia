@@ -58,10 +58,14 @@ interface FastEthernet0/9
 interface FastEthernet0/10
  switchport access vlan 20
  switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
 !
 interface FastEthernet0/11
  switchport access vlan 20
  switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
 !
 interface FastEthernet0/12
  switchport access vlan 20
@@ -131,6 +135,7 @@ banner motd $SOLO PERSONAL AUTORIZADO UTEZ$
 !
 line con 0
  password 7 0822455D0A16544541
+ logging synchronous
  login
 !
 line vty 0 4

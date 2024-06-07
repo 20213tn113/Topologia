@@ -34,6 +34,7 @@ ip domain-name red.edu.mx
 !
 !
 spanning-tree mode pvst
+spanning-tree vlan 1-4094 priority 0
 !
 !
 !
@@ -71,6 +72,8 @@ interface FastEthernet0/8
 interface FastEthernet0/9
 !
 interface FastEthernet0/10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
 !
 interface FastEthernet0/11
 !
@@ -109,12 +112,15 @@ interface Vlan1
  shutdown
 !
 interface Vlan30
+ mac-address 0007.ecd3.9e01
  ip address 192.168.30.1 255.255.255.0
 !
 interface Vlan40
+ mac-address 0007.ecd3.9e02
  ip address 192.168.40.1 255.255.255.0
 !
 interface Vlan50
+ mac-address 0007.ecd3.9e03
  ip address 192.168.50.1 255.255.255.0
 !
 ip classless
@@ -131,6 +137,7 @@ banner motd $SOLO PERSONAL AUTORIZADO UTEZ$
 !
 line con 0
  password 7 0822455D0A16544541
+ logging synchronous
  login
 !
 line aux 0
