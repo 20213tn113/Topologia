@@ -25,7 +25,8 @@ interface FastEthernet0/1
 interface FastEthernet0/2
 !
 interface FastEthernet0/3
- switchport mode dynamic desirable
+ switchport access vlan 50
+ switchport mode trunk
 !
 interface FastEthernet0/4
  switchport access vlan 20
@@ -118,6 +119,8 @@ interface GigabitEthernet0/2
 interface Vlan1
  no ip address
  shutdown
+!
+ip default-gateway 192.168.50.1
 !
 banner motd $SOLO PERSONAL AUTORIZADO UTEZ$
 !
